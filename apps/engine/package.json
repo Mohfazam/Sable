@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "main": "dist/server.js",
+  "type":"commonjs",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js"
   },
   "dependencies": {
+    "@types/typescript": "^2.0.0",
     "express": "^5.2.1",
     "playwright": "^1.58.2"
   },
