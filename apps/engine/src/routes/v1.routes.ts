@@ -1,8 +1,8 @@
 import { Router } from "express";
 
-const router = Router();
+export const v1Routes = Router();
 
-router.get("/health", (req, res) => {
+v1Routes.get("/health", (req, res) => {
     res.status(200).json({
         status: "ok",
         version: "v1"

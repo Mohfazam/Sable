@@ -1,13 +1,13 @@
-import express from "express";
 
-const app = express();
-app.use(express.json());
-app.get("/health", (req, res) => {
-    res.status(200).json({
-        "msg": "Root Endpoint"
+import { createApp } from "./app";
+ const PORT = 3000;
+
+ async function bootsTrap() {
+    const app = createApp();
+
+    app.listen(PORT, () => {
+        console.log(`Server Running on PORT ${PORT}`)
     });
-});
+ }
 
-app.listen(3000, () => {
-    console.log("Server running at port 3000");
-});
+ bootsTrap();
